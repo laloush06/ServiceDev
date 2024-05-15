@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d517d5ff3f.js" crossorigin="anonymous"></script>
+    <title>ServiceDetail</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+    </header>
+
+    <main>
+        <!-- Services Carts secction -->
+        <section class="allServices" id="allServices">
+            <div class="box-container">
+                <!-- Each Card Service usando vista dinamica -->
+                    <div class="box">
+                        <div class="icons">
+                            <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+
+
+                            <form action="/services/delete/<%= services.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="fa-solid fa-trash-can">Borrar Servicio</button>
+                            </form>
+
+
+
+                        </div>
+                        <h3><%= services.name %></h3>
+                        <div class="price"><%= services.profession %></div>
+                        <img src="/images/fotoPerfilServicios/<%= services.image %>" class="profilePhoto" alt="Profile Photo"> 
+                        <br>
+                        <p><%= services.description %></p>
+                        <div class="price"><%= services.price %> /h</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                        <a href="/services/edit/<%= services.id %>" class="action-button-edit">Editar perfil</a>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>

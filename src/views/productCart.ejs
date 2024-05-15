@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- Iconos con Font Awesome -->
+    <script src="https://kit.fontawesome.com/bb4291841a.js" crossorigin="anonymous"></script>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+    </header>
+    
+    <main class="contenedor">
+        <h1>Hola <%= locals.userLogged.name%> </h1>      
+            <div class="grid">
+            <% services.forEach(service => { %>
+                <div class="items">
+                    
+                    <img src="/images/fotoPerfilusuarios/<%= service.image %>" class="" alt="">
+                    <div class="informacion">                        
+                        <h3><%= service.name %></h3>
+                        <p><%= service.profesion %></p>
+                        <p><%= service.especialidad %></p>
+                        <p><%= service.category %></p>
+                        <div class="precio">
+                            <p><%= service.price %>$ /H</p>
+                        </div>
+                        
+                        <div class="comprar-carrito"> 
+                            <button>PAGAR SERVICIO</button>
+                        </div>
+                        </i>                   
+                    </div>
+
+                </div>
+                <% }); %>
+            </div>
+    </main>
+
+    <footer>
+
+        <%- include('./partials/footer.ejs') %>
+
+    </footer>
+    
+</body>
+</html>

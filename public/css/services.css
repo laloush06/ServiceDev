@@ -1,0 +1,221 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    text-transform: none;
+}
+
+body {
+    background-color: black;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #569ddc;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+/* logo Image */
+.header .logo img {
+    height: 6rem;
+    filter: invert(1);
+}
+/* NavBar Header */
+.header .navbar {
+    display: none;
+}
+.header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.header .navbar a:hover {
+    color: #569ddc;
+    border-bottom: .1rem solid #569ddc;
+    padding-bottom: .5rem;
+}
+/* Header icons */
+.header .icons {
+    display: flex;
+}
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color: #569ddc;
+}
+/* esconder logo dependiendo de desktop */
+#allServices.allServices-btn{
+    display: inline-block;
+    /* display: none; */
+}
+
+/* Services Carts Section */
+.heading {
+    color:  #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 50px 0px;
+}
+.segundaLinea{
+    color:  #a2b8cd;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    padding:  0px 50px 50px;
+}
+.allServices .box-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+}
+.allServices .box-container .box{
+    padding: 3rem;
+    text-align: center;
+    border: solid 1px #304d6d;
+}
+.allServices .box-container .box img {
+    height: 10rem;
+}
+.allServices .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.allServices .box-container .box .price {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.allServices .box-container .box:hover{
+    background: #a2b8cd;
+}
+.allServices .box-container .box:hover > *{
+    color: #1b1c1d;
+}
+/* .allServices .box-container .box:hover > *{
+    color: black;
+} */
+
+.allServices div a {
+    text-decoration: none;
+    color: white
+}
+.allServices .box-container .box .icons a i:hover{
+    /* fff */
+    color: #1b1c1d;
+}
+
+
+.allServices .box-container .box .icons:hover > *{
+    color: #1b1c1d;
+}
+/* Icones eye, starts and cart in each box */
+.allServices .box-container .box h3 {
+    word-wrap: break-word;
+}
+.allServices .box-container .box img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.allServices .box-container .box .icons {
+    display: flex;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    margin: 0rem;
+    justify-content: space-between;
+}
+.allServices .box-container .box .icons i{
+    padding: .3rem;
+}
+.allServices .box-container .box .icons i:hover{
+    color: #fff;
+}
+.allServices .box-container .box .stars {
+    color: #304d6d;
+    padding: 1.5rem;
+}
+.allServices .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: #bec831;
+}
+.allServices .box-container .box p {
+    word-wrap: break-word;
+    text-align: center;
+    color: #ccc;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+.action-button-edit{
+    background-color: #a2b8cd;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.action-button-edit:hover{
+    background-color: white;
+    color: #fff;
+
+}
+* {
+    text-transform: none;
+}
+
+/* Footer */
+
+/* Unificado en footer.css */
+
+/* Media queries */
+
+/* Tablet */
+@media(min-width: 768px){
+    .header{
+        padding: 1.5rem 7%;
+    }
+    .heading {
+        font-size: 50px;
+    }
+    .segundaLinea{
+        font-size: 50px;
+    }
+    #allServices.allServices-btn{
+        display: none;
+    }
+    .allServices .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+        padding: 0 30px;
+    }
+}
+/* DeskTop */
+@media(min-width: 1024px){
+    .heading {
+        font-size: 70px;
+    }
+    .segundaLinea{
+        font-size: 70px;
+    }
+}

@@ -1,0 +1,117 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: none;
+    transition: .2s linear;
+}
+
+/* body {
+    background-color: black;
+} */
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid #569ddc;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+/* logo Image */
+.header .logo img {
+    height: 6rem;
+    filter: invert(1);
+}
+/* NavBar Header */
+.header .navbar {
+    display: none;
+}
+.header .navbar a {
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    text-transform: none;
+    color: white;
+}
+.header .navbar a:hover {
+    color: #569ddc;
+    border-bottom: .1rem solid #569ddc;
+    padding-bottom: .5rem;
+    text-transform: none;
+}
+/* Header icon */
+.header .icons {
+    display: flex;
+}
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.0rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header .icons div:hover{
+    color: #569ddc;
+}
+.header .icons a {
+    padding-right: 3rem;
+}
+.header .userInfo {
+    display: block;
+    text-align: center;
+}
+.header p {
+    color: white;
+    padding-left: 1rem;
+    font-size: 18px;
+    /* font-size: smaller; */
+}
+.header img {
+    height: 3rem;
+    /* width: 3rem; */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* esconder logo dependiendo de desktop */
+#allServices.allServices-btn{
+    display: inline-block;
+    /* display: none; */
+}
+
+/* Media queries */
+
+
+/*                  MEDIA QUERYS                 */
+
+/* DeskTop */
+@media (min-width: 768px){
+    .header .navbar {
+        display: flex;
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 425px) and (max-width: 768px){
+    .header{
+        padding: 1.5rem 7%;
+    }
+    .header .navbar a {
+        display: flex;
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 425px){
+
+}

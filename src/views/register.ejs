@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+     <!-- Iconos de font awesome -->
+     <script src="https://kit.fontawesome.com/2913a10df8.js" crossorigin="anonymous"></script>
+     <!--Tipologia-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
+    <title>Service Dev - Register</title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+    </header>
+      
+    <main>
+       
+        <!-- Registro de datos utilizando enctype para manejar archivos-->
+        <form class="form" action="/register/create" method="POST" enctype="multipart/form-data"> 
+        <section class="contenedor-flex">
+            <section class="section-datos1">
+                <h2>ServDevolper</h2>
+            </section>
+
+           
+            <section class="section-datos2">
+
+                <ul class="errores">
+                </ul>
+                
+                <h2>Registro perfil</h2>
+                 <div class="espacio">
+                    <label><i class="fa-solid fa-user"></i>
+                        <input class="border-input" type="text" name="name" placeholder="nombre y apellido" value="<% locals.oldData ? oldData.name : null %>">
+                        <% if (locals.errors && errors.name) { %>
+                            <div>
+                                <p><%= errors.name.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label>
+                </div>
+                
+                <div class="espacio">
+                    <label><i class="fa-solid fa-at"></i>
+                        <input class="border-input" type="email" name="email" placeholder="email" value="<% locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div>
+                                <p><%= errors.email.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label>
+                </div>
+
+                <div class="espacio">
+                    <label><i class="fa-solid fa-key"></i>  
+                        <input class="border-input" type="password" name="password"  placeholder="contraseña" value="<% locals.oldData ? oldData.password : null %>" >
+                        <% if (locals.errors && errors.password) { %>
+                            <div>
+                                <p><%= errors.password.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label> 
+                </div>
+
+                <div class="espacio">
+                    <label><i class="fa-solid fa-key"></i>  
+                        <input class="border-input" type="password" name="confirm_pass"  placeholder="confirmar contraseña" value="<% locals.oldData ? oldData.confirm_pass : null %>">
+                        <% if (locals.errors && errors.confirm_pass) { %>
+                            <div>
+                                <p><%= errors.confirm_pass.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label> 
+                </div>
+
+                <div class="espacio">
+
+
+                    <label for="foto_usuario"><i class="fa-solid fa-camera"></i>
+                        <input  type="file" name="avatar"  placeholder="Foto perfil" value="<% locals.oldData ? oldData.avatar : null %>">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div>
+                                <p><%= errors.avatar.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label> 
+
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="type_user" value="1">
+                        Ofrecer servicio
+                        <input type="radio" name="type_user" value="2">
+                        Solicitar servicio
+                    </label>
+
+                </div>
+                          
+                <div>
+                <button class="button" type="submit" class="button-style">Registrarme</button>
+                </div>
+            </section>   
+
+        </form>
+     
+    </main>
+
+    <footer>
+
+        <%- include('./partials/footer.ejs') %>
+
+    </footer>
+    <script src="/js/register.js"></script>
+</body>
+</html>

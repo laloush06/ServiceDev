@@ -1,0 +1,191 @@
+/* AJUSTAR CARRITO AJUSTAR CARRITO AJUSTAR */
+
+.nav-carrito {
+    display: none;
+}
+
+.informacion nav button {
+    display: none;
+}
+
+.nav-carrito li {
+    list-style: none;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Este es el hijo de nav i:hover */
+.informacion nav i:hover .comprar-carrito {
+    width: 575px;
+    height: 490px;
+    position: absolute;
+    top: 150px;
+    right: 200px;
+    background-color: #ffff;
+}
+
+.informacion nav i:hover .nav-carrito {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+    border-bottom: solid thin #e1e1e1;
+}
+
+.informacion nav i:hover .comprar-carrito button {
+    display: block;
+    width: 90%;
+    padding: 1rem;
+    margin: 10px auto;
+    background-color: transparent;
+    border: solid thin #e1e1e1;
+    color: #494848;
+    cursor: pointer;
+}
+
+.informacion nav i:hover .comprar-carrito button:hover {
+    border: solid thin #494848;
+    transition: all .4s;
+}
+/* MAIN  MAIN  MAIN */
+
+/* Agrego proporcion de las letras en todo HTML */
+
+.fa-solid fa-magnifying-glass {
+    display: inline;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #fff;
+    padding: 50px 50px 25px;
+}
+
+/* LUPA E ICONO */
+.informacion nav {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: rgb(87, 100, 122, 34%);
+    margin-bottom: 30px;
+    color: gold;
+}
+
+/* COLOR DE LA PARTE IMAGEN, CANTIDAD ETC */
+.informacion nav li {
+    color: #000000;
+}
+
+.informacion nav i {
+    font-size: 3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    max-width: 1100px;
+    justify-content: center;
+    margin: auto;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px,280px));
+    padding-bottom: 50px;
+}
+
+.items {
+    background-color: #000000;
+    border: solid thin #304d6d;
+}
+
+.items img {
+    width: 100%;
+    height: 170px;
+}
+
+.informacion {
+    padding: 15px;
+}
+
+.informacion h3 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.informacion p {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Propiedades clase precio con etiqueta P precioss */
+.precio p {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+/* Propiedades de clase inf con etiqueta button */
+.informacion button {
+    padding: 1rem;
+    width: 100%;
+    background-color: #a2b8cd;
+    border: none;
+    outline: none;
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+/* Sombreado azul Boton Agregar al Carrito */
+.informacion button:hover {
+    background-color: #2da0c3;
+    transition: all .3s;
+}
+
+/* ----------------------------------- */
+
+/* Tablet Navigation */
+@media (min-width: 768px){
+    /* Header */
+    .main-header{
+        align-items: flex-end;
+        padding: 0px 10px 10px 10px;
+    }
+    .header-logo{
+        max-width: 40%;
+        max-height: 40%;
+    }
+    .logo-container{
+        display: block;
+        max-width: 50%;
+        text-align: center;
+        margin-left: -95px;
+    }
+    .logo-container p{
+        font-size: 15px;
+    }
+
+    /* Footer */
+    
+}
+
+/* Desktop Navigation */
+@media (min-width: 1024px){
+    /* Header */
+   
+    .logo-container{
+        display: block;
+        max-width: 20%;
+        text-align: center;
+        margin-left: -100px;
+    }
+    }
+
+    /* FALTA AGREGAR ELEMENTOS DEL CARRITO DE COMPRAS PARA SUMAR Y VACIAR EL CARRITO */
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/serviceCreate.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d517d5ff3f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Lato:ital,wght@1,100&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    
+    <title>Service edit form</title>
+    </head>
+
+<body>
+
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+    </header>
+
+    <main>
+        <div class="container-form">
+<!-- Texto izquierda -->
+            <div class="information">
+
+                <div class="info-childs">
+
+                    <h2>E d i c i ó n</h2>
+                    <h2>d e</h2>
+                    <h2>s e r v i c i  o</h2>
+
+                </div>
+
+            </div>
+<!-- Texto derecha -->
+            <div class="form-information">
+
+                <div class="form-information-childs">
+
+                    <h2>Usted se encuentra editando a: <i><%=services.name%></i></h2>
+
+                    <form action="/services/edit/<%= services.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+                        <ul class="errores">
+                        </ul>
+                        <!-- Nombre del servicio -->
+
+                        <label>Nombre del servicio  
+                            <input type="text" name="name" placeholder="Nombre del servicio" class="control" value="<%=services.name%>">
+                            <% if (locals.errorsObjeto && errorsObjeto.name) { %>
+                                <div>
+                                    <p><%= errorsObjeto.name.msg  %></p>
+                                </div>
+                            <% } %>
+                        </label>
+                          
+
+                    <!-- Descripcion -->
+                        <label>Descripción
+                            <input type="textarea" name="description" id="description" class="form-input" value="<%=services.description%>"></input>
+                            <% if (locals.errorsObjeto && errorsObjeto.description) { %>
+                                <div>
+                                    <p><%= errorsObjeto.description.msg  %></p>
+                                </div>
+                            <% } %>
+                        </label>
+
+
+                    <!-- Imagen -->
+
+                    <label>Imagen
+                        <input type="file" id="image" name="image" accept=".jpg">
+                        <% if (locals.errorsObjeto && errorsObjeto.image) { %>
+                            <div>
+                                <p><%= errorsObjeto.image.msg  %></p>
+                            </div>
+                        <% } %>
+                    </label>
+
+                    <!-- Categoria -->
+
+                        <!-- <label>Categoría:
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+                    </label> -->
+
+                    <!-- Profession -->
+
+                    <label>Profession:
+						<select name="profession" id="especialidad" class="form-input">
+							<option value="backend">Backend</option>
+							<option value="frontend">Frontend</option>
+							<option value="basedatos">Base de datos</option>
+						</select>
+                    </label>
+
+                    <!-- Precio -->
+
+                        <label>Precio
+                            <input type="tel" name="price" placeholder="Precio" class="control" value="<%=services.price%>">
+                            <% if (locals.errorsObjeto && errorsObjeto.price) { %>
+                                <div>
+                                    <p><%= errorsObjeto.price.msg  %></p>
+                                </div>
+                            <% } %>
+                        </label>
+                    
+                    <!-- Boton editar producto -->
+
+                    <input type="submit" value="Editar">
+
+                    </form>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+    <script src="/js/service-create-form.js"></script>
+</body>
+</html>
+
+
+<form method="" action="">
+
+    Tipo de servicio:
+
+    <input name="Ofrecer-servicio" type="checkbox" />Ofrecer servicio
+    
+    <input name="Solicitar-servicio" type="checkbox" />Solicitar servicio
+    
+    </form>

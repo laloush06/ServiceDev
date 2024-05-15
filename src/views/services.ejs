@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d517d5ff3f.js" crossorigin="anonymous"></script>
+
+    <title>Services</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+
+        <%- include('./partials/header') %>
+
+    </header>
+    
+
+    <main>
+        <!-- Services Carts secction -->
+        <section class="allServices" id="allServices">
+         <h1 class="heading">Desarrolladores</h1>
+         <h1 class="segundaLinea">para tus proyectos</h1>
+            <div class="box-container">
+
+                <!-- Each Card Service usando vista dinamica -->
+                <% services.forEach(service => { %>
+                    <div class="box">
+                        <div class="icons">
+                            <!-- En este item es donde se debe agregar el servicio al productCart -->
+                            <div> <i class="fa-solid fa-cart-shopping" id="cart-btn"></i> </div>
+                            <div>
+                                <a href="./services/serviceDetail/<%= service.id %>%>">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3><%= service.name %></h3>
+                        <div class="price"><%= service.profession %></div>
+                        <img src="/images/fotoPerfilServicios/<%= service.image %>" class="profilePhoto" alt=""> 
+                        <p><%= service.description %></p>
+                        <div class="price"><%= service.price %> /h</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>

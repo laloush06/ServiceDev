@@ -1,0 +1,46 @@
+[
+ {
+  "id": 2,
+  "name": "Martin Haimovich",
+  "email": "mhaimov1995@gmail.com",
+  "password": "$2a$10$wE0B5ruvSnCAb55hLtf6G.z.Wd23Ioq8y3wa7vCGktwOubLLWlCIW",
+  "confirm_pass": "$2a$10$Xk/zurCfB1jl/XE0Ag.yQOSLAokGRZZLKlQl1ldBQujfUwKaBCmGS",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1707157827804.jpg"
+ },
+ {
+  "id": 3,
+  "name": "aaaaaaaa",
+  "email": "haimo100@hotmail.com",
+  "password": "$2a$10$1olHkp9RfOSqtLCFz8U9YenbjBj4tTxwQ678KfwOZSrMxeWOKUjei",
+  "confirm_pass": "$2a$10$fkkYMNmrTsRv65wKo4Haz.5F8zZReAbksPpDdvzGzifoYp47pXmf6",
+  "avatar": "avatar-1707159195980.pdf"
+ },
+ {
+  "id": 4,
+  "name": "Juan",
+  "email": "a@dh.com",
+  "password": "$2a$10$V/frWdf.fOfJymZG1nlsTuE1..bu4WuKou/3wCl0HqUzkoSuyaeda",
+  "confirm_pass": "$2a$10$ou4YyDK0hR.xIxQYnUBYO.6ovHDBNeUxqPZA.h.p7O/TyebipFFai",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1707160657088.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Adelaida Gomez",
+  "email": "Adelaida@gmail.com",
+  "password": "$2a$10$qGGmXM8wsE1OYaIISAIzxeYqJqt2.VK1S3.acqPHJTgqG8ciSII7e",
+  "confirm_pass": "$2a$10$HrRdoHII79OdXnYD1c3WTesLQouzwF51em7RMSQ7Xu2u1mbPNaP82",
+  "type_user": "solicitar",
+  "avatar": "avatar-1708482826580.png"
+ },
+ {
+  "id": 6,
+  "name": "Eduardo condori",
+  "email": "laloush95@gmail.com",
+  "password": "$2a$10$iA4uTpGK1gGfUsxKCwe5deiF.rztNBHPhO/d8.OSJu5Y8r2zSZrHm",
+  "confirm_pass": "$2a$10$xwkzTIEF58xNvMe3JY1hteDehPQ6mBeH2qRVTlmrqszWtOh8n1dYy",
+  "type_user": "ofrecer",
+  "avatar": "avatar-1708954622442.jpg"
+ }
+]
